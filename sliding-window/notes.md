@@ -33,6 +33,43 @@
 
 # For Sliding Window problems the pointers will ALWAYS MOVE IN 1 SAME DIRECTION (TO RIGHT)
 
+# Sliding Window — Solving Cheatsheet
+
+## Before You Write a Single Line
+1. FIXED or VARIABLE window?
+   → Fixed  = K is given
+   → Variable = expand/shrink based on condition
+
+2. Write your VALID WINDOW condition in ONE sentence.
+   → If you can't → you don't understand the problem yet. Stop.
+
+3. Pick your DATA STRUCTURE.
+   → Sum/count         → integer
+   → Char frequency    → HashMap
+   → Uniqueness        → HashSet
+   → Max/Min in window → Monotonic Deque
+
+## While Coding
+4. RIGHT expands always.
+   LEFT shrinks only when window is INVALID.
+   → Each element enters & exits ONCE → O(n)
+   → Nested left loop = you broke the pattern
+
+5. Shrink loop order (never flip this):
+   → Remove arr[left] from DS first
+   → THEN left++
+
+6. Record answer AFTER the shrink loop. Never inside it.
+
+   right expands → while(invalid): shrink → ✅ record here
+
+## Before You Submit
+7. EDGE CASES — say these out loud:
+   □ Empty input?
+   □ K > array size?
+   □ All elements identical?
+   □ Negative numbers? (if yes → rethink if SW applies)
+
 # The 10 essential Sliding Window patterns
 
 ### Pattern 1: Fixed-Size Window
