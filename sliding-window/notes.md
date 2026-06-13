@@ -82,3 +82,7 @@
 ### Pattern 8: Sliding Window + Prefix Sums
 ### Pattern 9: Sliding Window + Two Pointers
 ### Pattern 10: Dual Windows (Two Simultaneous Windows)
+
+Optimization Notes 
+
+https://gemini.google.com/app/12093636b4a82256?hl=en-IN
