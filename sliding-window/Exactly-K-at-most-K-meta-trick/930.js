@@ -38,3 +38,5 @@ var numSubarraysWithSum = function(nums, goal) {
 
     return result;
 };
+
+https://gemini.google.com/app/cb34de1d7ab7c859?hl=en-IN
