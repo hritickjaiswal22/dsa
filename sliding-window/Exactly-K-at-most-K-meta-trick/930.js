@@ -40,3 +40,30 @@ var numSubarraysWithSum = function(nums, goal) {
 };
 
 https://gemini.google.com/app/cb34de1d7ab7c859?hl=en-IN
+https://gemini.google.com/app/adda09fa37b6ded2?hl=en-IN
+
+/**
+ * @param {number[]} nums
+ * @param {number} goal
+ * @return {number}
+ */
+var numSubarraysWithSum = function(nums, goal) {
+    const prefixSum = new Map();
+    let sum = 0;
+    let result = 0;
+
+    prefixSum.set(0,1);
+
+    for(let i = 0;i < nums.length;i++) {
+        sum += nums[i];
+
+        result += (prefixSum.get(sum - goal) || 0);
+
+        const freq = prefixSum.get(sum)
+
+        if(freq) prefixSum.set(sum,freq + 1);
+        else prefixSum.set(sum,1)
+    }
+
+    return result;
+};

@@ -1,12 +1,4 @@
-https://gemini.google.com/app/f777ba9fb2de6bbd?hl=en-IN
-
-https://gemini.google.com/app/88825a79a841045d?hl=en-IN
-
-https://claude.ai/chat/abbda0f6-ef10-44ec-8019-75e13caae454
-
-https://leetcode.com/problems/binary-subarrays-with-sum/description/ // https://gemini.google.com/app/cb34de1d7ab7c859?hl=en-IN https://gemini.google.com/app/adda09fa37b6ded2?hl=en-IN
-
-https://leetcode.com/problems/subarrays-with-k-different-integers/ // https://gemini.google.com/app/140d41e6f9cb2a12?hl=en-IN
+// https://gemini.google.com/app/140d41e6f9cb2a12?hl=en-IN
 
 /*
 The 3-Step "In the Wild" Checklist for Exactly(k) = Atmost(k) - Atmost(k - 1)
@@ -23,4 +15,5 @@ Why this matters: Think about what happens when you expand a sliding window to t
 
 Because the property only goes up, an "Exactly $K$" constraint is incredibly awkward. If you have exactly $K$ elements, expanding further might break it, but shrinking from the left might also break it. You are trapped.
 
-The realization: While "Exactly $K$" is unpredictable, "At Most $K$" is perfectly predictable (monotonic). If a window has $\le K$ distinct elements, shrin
+The realization: While "Exactly $K$" is unpredictable, "At Most $K$" is perfectly predictable (monotonic). If a window has $\le K$ distinct elements, shrinking it from the left will never make it invalid.
+*/
