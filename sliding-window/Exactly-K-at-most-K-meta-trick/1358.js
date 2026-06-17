@@ -1,3 +1,5 @@
+// 12 min
+
 /**
  * @param {string} s
  * @return {number}
