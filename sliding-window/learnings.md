@@ -26,3 +26,12 @@ Because the property only goes up, an "Exactly $K$" constraint is incredibly awk
 The realization: While "Exactly $K$" is unpredictable, "At Most $K$" is perfectly predictable (monotonic). If a window has $\le K$ distinct elements, shrin
 
 https://leetcode.com/problems/sliding-window-maximum/description/ https://gemini.google.com/app/a8d8c8995b0410fa
+
+https://gemini.google.com/app/a677d976657d0992
+
+The Core Signal for Sliding window with monotonic deque: "Window + Extremum"
+
+The absolute biggest giveaway is when a problem asks you to track an extremum (maximum or minimum) inside a moving range.
+
+- The Blueprint: "Given an array and a window of size $K$, find the max/min for every single position of the window as it slides from start to end."
+- Why a normal queue or heap fails: A regular queue doesn't give you $O(1)$ access to the max/min. A heap (Priority Queue) gives you the max/min in $O(1)$, but removing the element that slides out of the window takes $O(\log N)$. A monotonic deque does both insertions and extractions in $O(1)$ amortized time.
