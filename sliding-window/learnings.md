@@ -24,3 +24,5 @@ Why this matters: Think about what happens when you expand a sliding window to t
 Because the property only goes up, an "Exactly $K$" constraint is incredibly awkward. If you have exactly $K$ elements, expanding further might break it, but shrinking from the left might also break it. You are trapped.
 
 The realization: While "Exactly $K$" is unpredictable, "At Most $K$" is perfectly predictable (monotonic). If a window has $\le K$ distinct elements, shrin
+
+https://leetcode.com/problems/sliding-window-maximum/description/ https://gemini.google.com/app/a8d8c8995b0410fa
