@@ -35,3 +35,5 @@ The absolute biggest giveaway is when a problem asks you to track an extremum (m
 
 - The Blueprint: "Given an array and a window of size $K$, find the max/min for every single position of the window as it slides from start to end."
 - Why a normal queue or heap fails: A regular queue doesn't give you $O(1)$ access to the max/min. A heap (Priority Queue) gives you the max/min in $O(1)$, but removing the element that slides out of the window takes $O(\log N)$. A monotonic deque does both insertions and extractions in $O(1)$ amortized time.
+
+https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/submissions/2038144394/
