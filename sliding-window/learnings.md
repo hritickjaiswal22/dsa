@@ -39,3 +39,5 @@ The absolute biggest giveaway is when a problem asks you to track an extremum (m
 https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/submissions/2038144394/
 
 https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ https://gemini.google.com/app/af8af3d17fe3b0c9
+
+NOTE : WHEN YOU FACE A PROBLEM SAYING FIND MAX/MIN BY TAKING ELEMENTS FROM EITHER ENDS => INVERT THE STATEMENT + USE SLIDING WINDOW of fixed or variable size
