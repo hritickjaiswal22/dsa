@@ -1,3 +1,7 @@
+https://claude.ai/chat/8b701ad1-8b3e-40aa-a949-3a1a8dac414b
+
+https://claude.ai/chat/5d02f042-d182-460b-8f43-373f06ee6bef
+
 https://gemini.google.com/app/f777ba9fb2de6bbd?hl=en-IN
 
 https://gemini.google.com/app/88825a79a841045d?hl=en-IN
@@ -41,3 +45,28 @@ https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/submissions/
 https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/ https://gemini.google.com/app/af8af3d17fe3b0c9
 
 NOTE : WHEN YOU FACE A PROBLEM SAYING FIND MAX/MIN BY TAKING ELEMENTS FROM EITHER ENDS => INVERT THE STATEMENT + USE SLIDING WINDOW of fixed or variable size
+
+# The fix: Constraint Extraction Drill
+
+Before writing a single line of code on any unseen problem, answer these 5 questions out loud. Force yourself. Time limit: 3 minutes.
+
+1. What is the input structure?
+   (array of ints / string / binary array)
+
+2. What am I optimizing?
+   (max length / min length / count / exists?)
+
+3. What is the constraint on a valid window?
+   (sum ≥ k / at most k distinct / no repeats / 
+    window_size - maxFreq ≤ k)
+
+4. Is this constraint monotonic?
+   (if I grow the window, does it only get worse/better 
+    in one direction? YES → sliding window works)
+
+5. What breaks my window?
+   (this IS your shrink condition — write it explicitly)
+
+If you can answer Q3 and Q5 before coding, you will solve the problem. Every time. The code is just mechanical after that.
+
+https://gemini.google.com/app/19ddd786b37669a1
