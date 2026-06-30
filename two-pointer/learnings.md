@@ -27,3 +27,5 @@ without extra array"?
 - Are there TWO separate sorted arrays/lists to combine/compare?
         │
         ├── YES → Merge-style two pointer
+
+https://gemini.google.com/app/7cf807b179c64e6c?hl=en-IN
