@@ -10,7 +10,7 @@
 # How to Recognize the Pattern in an Interview (VIMP)
 
 - Is the input a SORTED array/string, asking for a pair/triplet
-satisfying a sum/difference condition?
+satisfying a sum/difference condition OR is it a "Container" problem where water/area is trapped between two boundaries, and the boundary heights dictate which side is the bottleneck?
         │
         ├── YES → Opposite-direction two pointer
         │
@@ -29,3 +29,32 @@ without extra array"?
         ├── YES → Merge-style two pointer
 
 https://gemini.google.com/app/7cf807b179c64e6c?hl=en-IN
+
+
+![alt text](image.png)
+
+https://leetcode.com/problems/trapping-rain-water/description/ -> https://gemini.google.com/app/68e1ade151b66435?hl=en-IN
+
+https://leetcode.com/problems/trapping-rain-water/description/ 
+
+Summary of the Mechanism
+
+    Initialize left = 0, right = len - 1.
+
+    Keep track of left_max = 0 and right_max = 0.
+
+    While left < right:
+
+        Update left_max with height[left], and right_max with height[right].
+
+        If left_max < right_max:
+
+            Trapped water += left_max - height[left]
+
+            left++
+
+        Else:
+
+            Trapped water += right_max - height[right]
+
+            right--
