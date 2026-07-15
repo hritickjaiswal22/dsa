@@ -1,6 +1,6 @@
 ## Binary Search — Recognition Signals & Exhaustive Pattern Taxonomy
 
-You already have the correct reframe from earlier work: **the precondition is a monotonic predicate over a search space — not "the array is sorted."** Sorted array is just the most common _instance_ of a monotonic predicate. Everything below builds on that. If you're pattern-matching on "is this array sorted?" you're solving 40% of what shows up in a 16+ LPA loop. The other 60% is binary search where there's no array at all — just a value space and a `isFeasible(x)` function.
+You already have the correct reframe from earlier work: **the precondition is a monotonic predicate over a search space — not "the array is sorted."** Sorted array is just the most common _instance_ of a monotonic predicate. Everything below builds on that. If you're pattern-matching on "is this array sorted?" you're solving 40% of what shows up in a good interview loop. The other 60% is binary search where there's no array at all — just a value space and a `isFeasible(x)` function.
 
 So basically for any problem to be a binary search problem it MUST have
 
@@ -116,7 +116,7 @@ This is index-space vs value-space — you're not searching an array, you're sea
 | Search a 2D Matrix II         | Sorted rows AND columns, but _not_ fully sorted flattened → staircase search (not pure binary search — know the distinction) | LC 240  |
 | Kth Smallest in Sorted Matrix | Cluster C + F combined                                                                                                       | LC 378  |
 
-This is a **very good classification**, but if your goal is **16+ LPA interview preparation**, I'd make one important change.
+This is a **very good classification**, but if your goal is **good interview interview preparation**, I'd make one important change.
 
 Don't memorize **40 different problems**.
 
@@ -425,7 +425,7 @@ Ask these in order. The first one that fires tells you which cluster you're in.
 | "Kth smallest/largest" combined with a matrix, pair of arrays, or distance metric                                                                | Binary search on value + counting | C/F     |
 | You're told "you may call this API/function at most O(log n) times"                                                                              | Interactive binary search         | E       |
 
-**The single highest-leverage habit to build:** when you see an optimization word — _minimize, maximize, smallest, largest, at least, at most_ — paired with a _feasibility check_ that's monotonic (if X works, does X+1 also work, or does X-1 also work?), your first move should be "can I binary search the answer space?" before reaching for DP or greedy. This is the single most under-recognized pattern at the senior level — juniors see "minimize max" and reach for DP; the O(n log(max-min)) binary-search-on-answer solution is what separates a 16+ LPA candidate.
+**The single highest-leverage habit to build:** when you see an optimization word — _minimize, maximize, smallest, largest, at least, at most_ — paired with a _feasibility check_ that's monotonic (if X works, does X+1 also work, or does X-1 also work?), your first move should be "can I binary search the answer space?" before reaching for DP or greedy. This is the single most under-recognized pattern at the senior level — juniors see "minimize max" and reach for DP; the O(n log(max-min)) binary-search-on-answer solution is what separates a good interview candidate.
 
 ---
 
@@ -501,7 +501,7 @@ function findPeak(lo, hi, isDescendingAfter) {
 
 - **Reaching for DP before checking monotonicity.** "Minimize the maximum" is the #1 tell you're about to over-engineer with DP when O(n log(range)) binary search on answer solves it cleanly.
 - **Writing `mid = (lo + hi) / 2`** instead of `lo + (hi - lo) / 2`. Integer overflow is a non-issue in JS practically, but say the safe version out loud anyway — interviewers at this bar notice the habit.
-- **Not stating the loop invariant before coding.** At a 16+ LPA bar you're expected to say "I'm maintaining the invariant that `lo` is always infeasible and `hi` is always feasible" _before_ writing a single line. Silent coding reads as pattern-memorization, not understanding.
+- **Not stating the loop invariant before coding.** At a good interview bar you're expected to say "I'm maintaining the invariant that `lo` is always infeasible and `hi` is always feasible" _before_ writing a single line. Silent coding reads as pattern-memorization, not understanding.
 - **Conflating Template 1 and Template 2.** If you're not 100% sure the target exists, Template 1 (`lo <= hi`, return -1) is correct. If you're finding a boundary that's guaranteed to exist within `[lo, hi]`, Template 2 is correct. Mixing them is the most common bug I'd flag in a live round.
 - **Forgetting to verify feasibility bounds in Cluster C.** Before you binary search on answer, you must be able to state: "at `hi`, the predicate is definitely true; at `lo - 1`, it's definitely false." If you can't justify both ends, you haven't earned the right to binary search yet.
 
